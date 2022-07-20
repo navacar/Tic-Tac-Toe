@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Размер доски</string>
+    </property>
+    <addaction name="actionSmall"/>
+    <addaction name="actionMedium"/>
+    <addaction name="actionLarge"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Выберите режим игры</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Игрок против компьютера</string>
+     </property>
+     <addaction name="playerFirst"/>
+     <addaction name="playerSecond"/>
+    </widget>
+    <addaction name="playerVSPlayer"/>
+    <addaction name="menu_3"/>
+    <addaction name="PcVsPC"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="actionSmall">
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>3х3</string>
+   </property>
+  </action>
+  <action name="actionMedium">
+   <property name="text">
+    <string>4х4</string>
+   </property>
+  </action>
+  <action name="actionLarge">
+   <property name="text">
+    <string>5х5</string>
+   </property>
+  </action>
+  <action name="playerVSPlayer">
+   <property name="text">
+    <string>Игрок против игрока</string>
+   </property>
+  </action>
+  <action name="PcVsPC">
+   <property name="text">
+    <string>Компьютер против компьютера (Демо режим)</string>
+   </property>
+  </action>
+  <action name="playerFirst">
+   <property name="text">
+    <string>Я первый</string>
+   </property>
+  </action>
+  <action name="playerSecond">
+   <property name="text">
+    <string>Компьютер первый</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
