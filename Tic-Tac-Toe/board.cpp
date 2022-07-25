@@ -151,11 +151,7 @@ Board::GameConditions Board::Win()
 {
     GameConditions result = SteelInProcces;
 
-    if (moveCounter == boardSize*boardSize)
-    {
-        result = NoWinner;
-    }
-    else if (moveCounter >= boardSize + boardSize - 1)
+    if (moveCounter >= boardSize + boardSize - 1)
     {
         int counter[4] = {0, 0, 0, 0};
 
@@ -231,6 +227,11 @@ Board::GameConditions Board::Win()
            }
        }
 
+    }
+
+    if (moveCounter == boardSize*boardSize && result == SteelInProcces)
+    {
+        result = NoWinner;
     }
 
     return result;
